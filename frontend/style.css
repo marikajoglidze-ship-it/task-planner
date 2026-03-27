@@ -1,0 +1,116 @@
+
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  /* აქ ვაკეთებ ანიმაციურ gradient-ს */
+  background: linear-gradient(-45deg, #ff7eb3, #ff758c, #667eea, #764ba2);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+
+  color: #333;
+  padding: 20px;
+}
+
+/* gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  color: white;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* INPUTS */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  border-radius: 8px;
+  border: none;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(45deg, #ff7eb3, #667eea);
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* LIST */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f0f0f0;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  border-radius: 10px;
+}
+
+/* SUMMARY */
+.card p {
+  line-height: 1.6;
+}
+
+
+/* 📱 Tablet */
+@media (max-width: 1024px) {
+  .card {
+    max-width: 500px; /* ცოტა ფართო */
+  }
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    max-width: 100%; /* სრულ სიგანეზე */
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

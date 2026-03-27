@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Task Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- მთავარი სათაური -->
+  <h1>✨ FINAL PROJECT 1 ✨</h1>
+
+  <!-- TASK FORM -->
+  <div class="card">
+
+    <h2>Add New Task</h2>
+
+    <form id="taskForm">
+
+      <input type="text" id="title" placeholder="Task Title" required>
+
+      <input type="text" id="description" placeholder="Description">
+
+      <input type="text" id="category" placeholder="Category">
+
+      <select id="priority">
+        <option value="low">🟢 Low</option>
+        <option value="medium">🟡 Medium</option>
+        <option value="high">🔴 High</option>
+      </select>
+
+      <input type="number" id="estimatedMinutes" placeholder="Estimated Minutes">
+
+      <select id="status">
+        <option value="pending">Pending</option>
+        <option value="in-progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+
+      <input type="date" id="deadline">
+
+      <button type="submit">Add Task 🚀</button>
+
+    </form>
+
+  </div>
+
+
+  <!-- FILTERS -->
+  <div class="card">
+
+    <h2>🔍 Filters</h2>
+
+    <input type="text" id="search" placeholder="Search by title...">
+
+    <select id="filterPriority">
+      <option value="">All Priorities</option>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <select id="filterStatus">
+      <option value="">All Status</option>
+      <option value="pending">Pending</option>
+      <option value="in-progress">In Progress</option>
+      <option value="done">Done</option>
+    </select>
+
+  </div>
+
+
+  <!-- SUMMARY -->
+  <div class="card">
+    <h2>📊 Summary</h2>
+
+    <p>📌 Total Tasks: <span id="totalTasks">0</span></p>
+    <p>⏳ Pending: <span id="pendingTasks">0</span></p>
+    <p>✅ Done: <span id="doneTasks">0</span></p>
+    <p>🔥 High Priority: <span id="highTasks">0</span></p>
+    <p>⏱ Total Minutes: <span id="totalMinutes">0</span></p>
+
+  </div>
+
+
+  <!-- DAILY PLAN -->
+  <div class="card">
+    <h2>📅 Today Plan</h2>
+    <ul id="dailyPlan"></ul>
+  </div>
+
+
+  <!-- TASK LIST -->
+  <div class="card">
+    <h2>📋 Tasks</h2>
+    <ul id="taskList"></ul>
+  </div>
+
+
+  <!-- JS -->
+  <script src="./script.js"></script>
+
+</body>
+</html>
